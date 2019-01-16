@@ -24,5 +24,15 @@ namespace GrandBluePairHuntingSupportTool
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            // ウィンドウ生成
+            var window = new SettingDialog();
+            // ウィンドウ表示
+            window.Show();
+            // 自身（MainWindow）を隠す
+            this.Hide();
+        }
     }
 }

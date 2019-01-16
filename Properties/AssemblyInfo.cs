@@ -10,7 +10,7 @@ using System.Windows;
 [assembly: AssemblyTitle("GrandBluePairHuntingSupportTool")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("YagamiDevelop")]
 [assembly: AssemblyProduct("GrandBluePairHuntingSupportTool")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]

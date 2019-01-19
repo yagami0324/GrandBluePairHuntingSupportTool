@@ -29,11 +29,11 @@
         </StackPanel>
         <StackPanel HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Grid.Column="1">
             <TextBox x:Name="TextBoxPin" HorizontalAlignment="Center" Height="20" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Margin="0,0,0,3"/>
-            <Button Content="認証" HorizontalAlignment="Center" VerticalAlignment="Top" Width="120"/>
+            <Button Content="認証" HorizontalAlignment="Center" VerticalAlignment="Top" Width="120" Click="Button_Twitter_Pin_Click"/>
         </StackPanel>
         <StackPanel HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Grid.Column="1">
             <TextBox x:Name="TextBoxMonitorId" HorizontalAlignment="Center" Height="20" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Margin="0,0,0,3"/>
-            <Button Content="登録" HorizontalAlignment="Center" VerticalAlignment="Top" Width="120" Click="Button_Click"/>
+            <Button Content="登録" HorizontalAlignment="Center" VerticalAlignment="Top" Width="120" Click="Button_MonitorId_Click"/>
         </StackPanel>
 
     </Grid>

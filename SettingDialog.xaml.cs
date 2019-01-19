@@ -32,7 +32,7 @@ namespace GrandBluePairHuntingSupportTool
         private void Button_Twitter_OAuth_Click(object sender, RoutedEventArgs e)
         {
             //Pinの発行
-            session = OAuth.Authorize("ConsumerKeyの値", "ConsumerSecretの値");
+            session = OAuth.Authorize(TwitterKeys.ConsumerKey,TwitterKeys.ConsumerSecret);
             System.Diagnostics.Process.Start(session.AuthorizeUri.AbsoluteUri);
         }
 
@@ -48,7 +48,7 @@ namespace GrandBluePairHuntingSupportTool
             Properties.Settings.Default.Save();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_MonitorId_Click(object sender, RoutedEventArgs e)
         {
             //監視ユーザのIDを設定ファイルに保存
             Properties.Settings.Default.MonitorId = TextBoxMonitorId.Text;

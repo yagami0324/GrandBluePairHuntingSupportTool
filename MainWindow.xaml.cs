@@ -50,7 +50,12 @@ namespace GrandBluePairHuntingSupportTool
 
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Pick_RescueID_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Open_SettingDialog_Click(object sender, RoutedEventArgs e)
         {
             // ウィンドウ生成
             var window = new SettingDialog();
@@ -59,5 +64,6 @@ namespace GrandBluePairHuntingSupportTool
             // 自身（MainWindow）を隠す
             this.Hide();
         }
+
     }
 }

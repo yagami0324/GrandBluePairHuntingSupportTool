@@ -61,6 +61,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="TwitterKeys.cs" />
     <Compile Include="SettingDialog.xaml.cs">
       <DependentUpon>SettingDialog.xaml</DependentUpon>
     </Compile>

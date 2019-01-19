@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using CoreTweet;
 
 namespace GrandBluePairHuntingSupportTool
 {
@@ -20,9 +21,33 @@ namespace GrandBluePairHuntingSupportTool
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        public Tokens tokens;
+
         public MainWindow()
         {
             InitializeComponent();
+
+            // 設定読み込み
+            String ConsumerKey = TwitterKeys.ConsumerKey;
+            String ConsumerSecret = TwitterKeys.ConsumerSecret;
+            String AccessToken = Properties.Settings.Default.AccessToken;
+            String AccessTokenSecret = Properties.Settings.Default.AccessTokenSecret;
+
+            // アクセストークンが記録されていない場合に設定ウィンドウを開く
+            if( (AccessToken == "") || (AccessTokenSecret == ""))
+            {
+                // ウィンドウ生成
+                var window = new SettingDialog();
+                // ウィンドウ表示
+                window.Show();
+                // 自身（MainWindow）を隠す
+                this.Hide();
+            }
+
+            //Twitterに接続
+            tokens = Tokens.Create(ConsumerKey, ConsumerSecret, AccessToken, AccessTokenSecret);
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

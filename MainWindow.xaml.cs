@@ -23,6 +23,7 @@ namespace GrandBluePairHuntingSupportTool
     {
 
         public Tokens tokens;
+        public Dictionary<string, object> search_param = new Dictionary<string, object>();
 
         public MainWindow()
         {
@@ -48,10 +49,17 @@ namespace GrandBluePairHuntingSupportTool
             //Twitterに接続
             tokens = Tokens.Create(ConsumerKey, ConsumerSecret, AccessToken, AccessTokenSecret);
 
+            //ツイート取得用パラメータの設定
+            search_param["count"] = 1;
+            search_param["screen_name"] = Properties.Settings.Default.MonitorId;
+
         }
 
         private void Button_Pick_RescueID_Click(object sender, RoutedEventArgs e)
         {
+            var tweets = tokens.Statuses.UserTimeline(search_param);
+
+            MessageBox.Show(tweets[0].Text);
 
         }
 

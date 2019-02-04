@@ -63,7 +63,7 @@ namespace GrandBluePairHuntingSupportTool
 
             // 正規表現で救援ID・Lv・ボス名を抽出
             string input = tweets[0].Text;
-            string expression = @"(?<ID>\w+) :参戦ID\s参加者募集！\sLv(?<LV>[0-9]+) (?<BOSS>.+)\s";
+            string expression = @"(?<ID>\w+) :参戦ID\s参加者募集！\sLv(?<LV>[0-9]+) (?<BOSS>.+)";
             string rescue_id = "";
             string boss_level = "";
             string boss_name = "";

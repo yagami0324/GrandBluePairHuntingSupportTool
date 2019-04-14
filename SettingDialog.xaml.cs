@@ -40,7 +40,21 @@ namespace GrandBluePairHuntingSupportTool
         {
             //トークンの発行
             string pincode = TextBoxPin.Text;
-            tokens = OAuth.GetTokens(session, pincode);
+
+            try
+            {
+                tokens = OAuth.GetTokens(session, pincode);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("認証に失敗しました");
+                return;
+            }
+
+            //認証成功した旨をメッセージボックスに表示
+            var verify_credentials = tokens.Account.VerifyCredentials();
+            string success_message = "認証に成功しました\r\nアカウント：@" + verify_credentials.ScreenName + "\r\nユーザ名：" + verify_credentials.Name;
+            MessageBox.Show(success_message);
 
             //アクセストークンを設定ファイルに保存
             Properties.Settings.Default.AccessToken = tokens.AccessToken;

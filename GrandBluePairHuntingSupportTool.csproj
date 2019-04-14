@@ -35,7 +35,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>coin.ico</ApplicationIcon>
+    <ApplicationIcon>coins.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CoreTweet, Version=1.0.0.483, Culture=neutral, processorArchitecture=MSIL">
@@ -114,6 +114,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="coin.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="coins.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

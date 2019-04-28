@@ -11,5 +11,7 @@ https://www.dropbox.com/sh/u9rhshi8hjns89l/AAB-FgbGqSVw8O88OJMkRWIYa?dl=0
 "TwitterKeys_DUMMY.cs"→"TwitterKeys.cs"とリネームした上で、  
 有効なTwitter API Keyを入力してください。
 
-次は同じツールをWEBアプリケーションとして製作する。(XAMPP+Laravel+AWS)  
-土古戦場までに完成目標。
+~~次は同じツールをWEBアプリケーションとして製作する。(XAMPP+Laravel+AWS)  
+土古戦場までに完成目標。~~
+
+ルートが変わったのでPythonとSQLの学習に変更
